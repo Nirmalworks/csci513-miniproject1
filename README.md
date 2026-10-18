@@ -2,7 +2,7 @@
 
 This is my adaptive cruise control (ACC) project for CSCI 513. My car drives in CARLA behind a lead car. It tries to cruise at 20 m/s, and when it gets close to the lead car it slows down so it never crashes into it.
 
-All 15 test scenarios pass all 5 safety checks. 🎉
+All 15 test scenarios pass all 5 safety checks. 
 
 ![scenario3_5](mp1-acc-showcase/gifs/scenario3_5.gif)
 
@@ -72,8 +72,7 @@ csci513-miniproject1/
 
 ## Running it yourself
 
-You'll need **CARLA 0.9.15**, Python 3.8, and a GPU. You can install CARLA directly, use Docker (`make build`), or follow [HPC-Instructions.md](HPC-Instructions.md).
-
+You'll need **CARLA 0.9.15**, Python 3.8, and a GPU. You can install CARLA directly, use Docker (`make build`)
 ```bash
 pip install -e .
 
