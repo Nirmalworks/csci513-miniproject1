@@ -70,29 +70,3 @@ csci513-miniproject1/
 └── setup.py, setup.cfg    # Python package setup
 ```
 
-## Running it yourself
-
-You'll need **CARLA 0.9.15**, Python 3.8, and a GPU. You can install CARLA directly, use Docker (`make build`)
-```bash
-pip install -e .
-
-# terminal 1: start CARLA
-./CarlaUE4.sh -RenderOffScreen      # or: make run-carla
-
-# terminal 2: run all scenarios, then grade them
-python3 -m mp1_simulator test_data/*
-python3 -m mp1_evaluation logs/*
-```
-
-Each run saves its logs to `logs/` and a dashcam video to `vids/`.
-
-To make the fancy showcase videos:
-
-```bash
-python record_showcase.py
-python make_showcase.py
-```
-
----
-
-The simulator, evaluator, and scenarios came with the course (CPS-VIDA Lab). I wrote the controller and the showcase scripts.
