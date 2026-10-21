@@ -5,7 +5,7 @@
 
 
 # Ignore log directory
-logs/
+/logs/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
