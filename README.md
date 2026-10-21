@@ -53,7 +53,7 @@ Want to see them? There's a video and a GIF of every scenario in [`mp1-acc-showc
 ## Folder structure
 
 ```
-csci513-miniproject1/
+csci513-project/
 ├── mp1_controller/        # 👈 my controller lives here
 │   └── controller.py
 ├── mp1_simulator/         # talks to CARLA, spawns the cars, runs each scenario, writes logs
