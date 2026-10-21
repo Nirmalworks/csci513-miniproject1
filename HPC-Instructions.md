@@ -54,12 +54,6 @@ $ source ~/.bashrc
 $ sed -i '/auto_activate_base/d' ~/.condarc
 ```
 
-**Note:** If you later see an error like `MultipleKeysError: Multiple aliased keys in file ~/.condarc: auto_activate_base, auto_activate`, your `~/.condarc` has both the old and new names of this setting. Remove the old one and retry:
-
-```shell
-$ sed -i '/auto_activate_base/d' ~/.condarc
-```
-
 This will load the [Anaconda](https://docs.conda.io/en/latest/) module. So, you will have to create your own environment:
 
 ```shell
