@@ -9,7 +9,7 @@ For every scenario it makes a video with:
   * speed and gap graphs with a moving time cursor
   * PASS/FAIL for each of the 5 grading rules (from the official evaluator)
 
-Output folder (default ~/projects/nirmal-csci-project/mp1-acc-showcase):
+Output folder (default: mp1-acc-showcase/ in this repo):
   videos/<scenario>.mp4      full-quality HUD video per scenario
   videos/all_scenarios.mp4   all 15 back to back
   gifs/<scenario>.gif        small previews that play directly on GitHub
@@ -17,8 +17,8 @@ Output folder (default ~/projects/nirmal-csci-project/mp1-acc-showcase):
   controller.py              your controller
   README.md                  score table + all previews
 
-Usage (nirmal-csci-mp1 environment active):
-  python ~/projects/nirmal-csci-project/make_showcase.py --run-name attempt01
+Usage (project environment active, from the repo root):
+  python make_showcase.py --run-name attempt01
 """
 
 import argparse
@@ -34,8 +34,8 @@ import sys
 import cv2
 import numpy as np
 
-DEFAULT_PROJECT = "/home/omey/projects/nirmal-csci-project/csci513-miniproject1"
-DEFAULT_OUT = "/home/omey/projects/nirmal-csci-project/mp1-acc-showcase"
+DEFAULT_PROJECT = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_OUT = os.path.join(DEFAULT_PROJECT, "mp1-acc-showcase")
 
 RULES = [
     ("safeFollowing", "Safe gap"),

@@ -11,10 +11,10 @@ Then make_showcase.py turns that into HUD videos + GIFs + README.
 
 No assignment files are changed. Put this file next to make_showcase.py.
 
-Usage (nirmal-csci-mp1 env active, CARLA server running in another terminal):
-  python ~/projects/nirmal-csci-project/record_showcase.py
-  python ~/projects/nirmal-csci-project/record_showcase.py --show        # also open a live window
-  python ~/projects/nirmal-csci-project/record_showcase.py --only scenario3_5
+Usage (project environment active, CARLA server running in another terminal, from the repo root):
+  python record_showcase.py
+  python record_showcase.py --show        # also open a live window
+  python record_showcase.py --only scenario3_5
 """
 
 import argparse
