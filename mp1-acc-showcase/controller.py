@@ -1,6 +1,8 @@
-"""This file is the main controller file.
+"""Adaptive cruise controller.
 
-Here, you will design the controller for your for the adaptive cruise control system.
+Each step it estimates the lead car's speed from the change in gap, computes the fastest
+speed from which the ego car can still stop behind the lead, and tracks the lower of that
+and the desired speed.
 """
 
 import math
@@ -15,23 +17,16 @@ class Controller:
     def __init__(self, distance_threshold: float):
         self.distance_threshold = distance_threshold
 
-        # NEW: memory between calls
+        # memory between calls
         self.previous_distance = None   # distance on the last call (None = no lead car)
         self.lead_speed = 0.0           # our running guess of the lead car's speed (m/s)
 
     def run_step(self, obs: Observation) -> Tuple[float, Mode]:
-        """This is the main run step of the controller.
+        """Return a control value in [-10, 10] and the operation mode for one step.
 
-        Here, you will have to read in the observations `obs`, process it, and output an
-        acceleration value and the operation mode.
-        The acceleration value must be some value between -10.0 and 10.0.
-
-        For the operation mode output True when "following" and False when "cruising".
-
-        Note that the acceleration value is really some control input that is used
-        internally to compute the throttle an brake values of the car.
-
-        Below is some example code where the car just outputs the control value 10.0
+        The control value is mapped to throttle (positive) or brake (negative) by the
+        simulator. The mode is FOLLOWING when the lead car is within 40 m in our lane,
+        otherwise CRUISING.
         """
 
         ego_velocity = obs.ego_velocity
