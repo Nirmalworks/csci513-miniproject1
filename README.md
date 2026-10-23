@@ -59,7 +59,7 @@ csci513-project/
 ├── mp1_simulator/         # talks to CARLA, spawns the cars, runs each scenario, writes logs
 ├── mp1_evaluation/        # checks the logs against the 5 STL rules
 ├── test_data/             # 15 scenario files (start positions + what the lead car does)
-├── mp1-acc-showcase/      # results: README, videos/, gifs/, copy of the controller
+├── mp1-acc-showcase/      # results: README, logs/ (the CSV traces behind the pass table), videos/, gifs/, controller copy
 ├── record_showcase.py     # runs every scenario and records a bird's-eye view
 ├── make_showcase.py       # turns the recordings into videos/GIFs with speed + gap graphs
 ├── imgs/                  # screenshots for the HPC guide
